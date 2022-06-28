@@ -13,33 +13,31 @@ import State from './Components/State/State';
 import Styling from './Components/Styling/Styling';
 import BaiTapXe from './Components/BaiTapXe/BaiTapXe';
 import RenderingWithMap from './Components/RenderingWithMap/RenderingWithMap';
+import ParentProps from './Components/Props/ParentProps';
+import BaiTapProps from './Components/BaiTapProps/BaiTapProps';
 
 function App() {
   return (
     <div className="App container">
+      {/* Buổi 1 */}
       {/* <ClassComponent /> */}
-
       {/* <FunctionComponent /> */}
-
       {/* <ClassComponent /> */}
-
       {/* <FunctionComponent /> */}
-
       {/* <Home /> */}
-
       {/* <DataBinding /> */}
-
       {/* <HandlingEvent /> */}
-    
+
+      {/* Buổi 2 */}
       {/* <RenderingWithConditions /> */}
-
       {/* <State /> */}
-
       {/* <Styling /> */}
+      {/* <BaiTapXe /> */}
+      {/* <RenderingWithMap /> */}
 
-      <BaiTapXe />
-
-      <RenderingWithMap />
+      {/* Buổi 3 */}
+      {/* <ParentProps /> */}
+      <BaiTapProps />
     </div>
   );
 }
