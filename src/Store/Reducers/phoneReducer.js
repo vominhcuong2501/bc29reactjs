@@ -44,6 +44,13 @@ export const phoneReducer = (state = DEFAULT_STATE, action) => {
         return { ...state };
       };
 
+      case "DELETE_PHONE": {
+        const data = [...state.cartList];
+        const index = data.findIndex((ele) => ele === action.phone);
+        data.splice(index,1);
+        state.cartList = data;
+        return { ...state };
+      };
     default: {
       return { ...state };
     }

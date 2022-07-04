@@ -87,7 +87,7 @@ class GioHang extends Component {
                           <td>{ele.giaBan.toLocaleString()}</td>
                           <td>{(ele.giaBan * ele.soLuong).toLocaleString()}</td>
                           <td>
-                            <button className="btn btn-danger">Xóa</button>
+                            <button className="btn btn-danger" onClick={() => this.props.deletePhone(ele)}>Xóa</button>
                           </td>
                         </tr>
                       );
@@ -137,7 +137,15 @@ const mapDispatchToProps = dispatch => {
         phone,
         isIncrease
       })
+    },
+
+    deletePhone: (phone) => {
+      dispatch({
+        type: 'DELETE_PHONE',
+        phone
+      })
     }
+
   }
 }
 
