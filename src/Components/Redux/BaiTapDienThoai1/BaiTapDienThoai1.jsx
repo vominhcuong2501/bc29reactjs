@@ -4,36 +4,12 @@ import DanhSachDienThoai from "./DanhSachDienThoai";
 import GioHang from "./GioHang";
 import phoneList from "../../../Data/DataPhone.json";
 
-export default class BaiTapDienThoai extends Component {
+export default class BaiTapDienThoaiRedux extends Component {
   state = {
     selectedPhone: phoneList[0],
     cartList: [],
   };
 
-  selectPhone = (phone) => {
-    this.setState({
-      selectedPhone: phone,
-    });
-  };
-
-  addToCart = (phone) => {
-    const data = [...this.state.cartList];
-    let index = data.findIndex((ele) => ele.maSP === phone.maSP);
-    if (index !== -1) {
-      data[index].soLuong += 1;
-    } else {
-      data.push({ ...phone, soLuong: 1 });
-    }
-
-    this.setState(
-      {
-        cartList: data,
-      },
-      () => {
-        console.log(this.state.cartList);
-      }
-    );
-  };
 
   handleQuantity = (phone, isIncrease) => {
     const data = [...this.state.cartList];
@@ -60,15 +36,9 @@ export default class BaiTapDienThoai extends Component {
   render() {
     return (
       <div className="container">
-        <GioHang
-          cartList={this.state.cartList}
-          handleQuantity={this.handleQuantity}
-        />
-        <DanhSachDienThoai
-          selectPhone={this.selectPhone}
-          addToCart={this.addToCart}
-        />
-        <ChiTietSanPham selectedPhone={this.state.selectedPhone} />
+        <GioHang />
+        <DanhSachDienThoai />
+        <ChiTietSanPham />
       </div>
     );
   }

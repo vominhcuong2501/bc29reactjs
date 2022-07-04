@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import {connect} from 'react-redux';
 
-export default class GioHang extends Component {
+class GioHang extends Component {
   render() {
     return (
       <div>
@@ -121,3 +122,25 @@ export default class GioHang extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    ...state.phoneReducer,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    handleQuantity: (phone, isIncrease) => {
+      dispatch({
+        type: 'HANDLE_QUANTITY',
+        phone,
+        isIncrease
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GioHang);
+
+// export default connect(state => ({...state.phoneReducer}))(GioHang)
