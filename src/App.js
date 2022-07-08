@@ -17,10 +17,11 @@ import ParentProps from "./Components/Props/ParentProps";
 import BaiTapProps from "./Components/BaiTapProps/BaiTapProps";
 import DemoRedux from "./Components/Redux/DemoRedux/Parent";
 import BaiTapDienThoaiRedux from "./Components/Redux/BaiTapDienThoai1/BaiTapDienThoai1";
+import BaiTapThuDo from "./Components/Redux/BaiTapThuDo/BaiTapThuDo";
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       {/* Buổi 1 */}
       {/* <ClassComponent /> */}
       {/* <FunctionComponent /> */}
@@ -43,7 +44,10 @@ function App() {
 
       {/* Buổi 4 */}
       {/* <DemoRedux /> */}
-      <BaiTapDienThoaiRedux />
+      {/* <BaiTapDienThoaiRedux /> */}
+
+      {/* Buổi 5 */}
+      <BaiTapThuDo />
     </div>
   );
 }

@@ -25,15 +25,10 @@ export const phoneReducer = (state = DEFAULT_STATE, action) => {
     };
 
     case "HANDLE_QUANTITY": {
+        const {phone, isIncrease} = action.payload
         const data = [...state.cartList];
-        const index = data.findIndex((ele) => ele.maSP === action.phone.maSP);
-    
-        // if (index === -1) {
-        //   alert("Không tìm thấy sản phẩm");
-        //   throw new Error("Không tìm thấy sản phẩm");
-        // }
-    
-        if (action.isIncrease) {
+        const index = data.findIndex((ele) => ele.maSP === phone.maSP);
+        if (isIncrease) {
           data[index].soLuong += 1;
         } else if (data[index].soLuong > 1) {
           data[index].soLuong -= 1;

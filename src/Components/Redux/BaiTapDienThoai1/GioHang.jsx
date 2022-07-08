@@ -134,8 +134,7 @@ const mapDispatchToProps = dispatch => {
     handleQuantity: (phone, isIncrease) => {
       dispatch({
         type: 'HANDLE_QUANTITY',
-        phone,
-        isIncrease
+        payload: {phone, isIncrease}
       })
     },
 

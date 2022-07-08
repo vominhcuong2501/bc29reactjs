@@ -18,7 +18,7 @@ class ChiTietSanPham extends Component {
       <div className="row mt-5">
         <div className="col-5">
           <h4>{tenSP}</h4>
-          <img src={hinhAnh} className="img-fluid" alt="phone" />
+          <img src={hinhAnh} className="img-fluid" alt="phone" height={200} />
         </div>
         <div className="col-7">
           <h4 className="mb-5">THÔNG SỐ KỸ THUẬT</h4>
