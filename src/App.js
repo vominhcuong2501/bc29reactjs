@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./Components/BaiTapLayout/Footer";
 import Header from "./Components/BaiTapLayout/Header";
-import Home from "./Components/BaiTapLayout/Home";
+// import Home from "./Components/BaiTapLayout/Home";
 import Navigation from "./Components/BaiTapLayout/Navigation";
 import DataBinding from "./Components/DataBinding/DataBinding";
 import ClassComponent from "./Components/DemoComponents/ClassComponent";
@@ -18,6 +18,15 @@ import BaiTapProps from "./Components/BaiTapProps/BaiTapProps";
 import DemoRedux from "./Components/Redux/DemoRedux/Parent";
 import BaiTapDienThoaiRedux from "./Components/Redux/BaiTapDienThoai1/BaiTapDienThoai1";
 import BaiTapThuDo from "./Components/Redux/BaiTapThuDo/BaiTapThuDo";
+import LifeCycle from "./Components/LifeCycle/LifeCycle";
+import BaiTapQuanLyNguoidung from "./Components/BaiTapQuanLyNguoidung/BaiTapQuanLyNguoidung";
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import MovieDetail from "./Pages/MovieDetail/MovieDetail";
+import HeaderRouter from "./Components/HeaderRouter/HeaderRouter";
+import PageNotFound from "./Pages/PageNotFound/PageNotFound";
+import Router from "./Router";
 
 function App() {
   return (
@@ -46,8 +55,31 @@ function App() {
       {/* <DemoRedux /> */}
       {/* <BaiTapDienThoaiRedux /> */}
 
-      {/* Buổi 5 */}
-      <BaiTapThuDo />
+      {/* Buổi 5+6 */}
+      {/* <BaiTapThuDo /> */}
+
+      {/* Buổi 7 */}
+      {/* <LifeCycle /> */}
+
+      {/* Buổi 8 */}
+      {/* <BaiTapQuanLyNguoidung /> */}
+
+      <BrowserRouter>
+      {/* <HeaderRouter /> */}
+      
+      {/* version 5 */}
+        {/* <Routes>
+          <Route path="/" element={<Navigate to="/home"/>} />
+          <Route path="/home" element={<Home />}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/movie-detail" element={<MovieDetail />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes> */}
+
+        {/* version 6 */}
+        <Router />
+      </BrowserRouter>
+
     </div>
   );
 }
