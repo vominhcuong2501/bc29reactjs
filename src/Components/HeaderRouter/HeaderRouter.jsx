@@ -44,6 +44,11 @@ class HeaderRouter extends Component {
                 Login
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/hooks">
+                Hooks
+              </NavLink>
+            </li>
           </ul>
           <div className="d-flex">
             <div className="form-group mb-0">

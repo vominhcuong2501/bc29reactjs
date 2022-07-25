@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // Có 3 cách
 // 1. stylesheets => tạo ra file css thông thường sẽ dính cho tất cả các component cho tên class giống css (không sử dụng nhiều)
 import "./style.css"
-// 2. module => tao file css [tên].module.css, khi gọi phải đặt (tên import.tên class)
+// 2. module => tao file css [tên].module.css, khi gọi phải đặt (tên import.tên class from'')
 import style from './style.module.css'
 // 3. style inline => viết trực tiếp bên trong thẻ
 
